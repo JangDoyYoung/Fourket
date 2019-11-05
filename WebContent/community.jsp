@@ -55,6 +55,13 @@
 	    	 
 	    	 var subject = $('#subject').val();
 	    	 
+	    	 if(subject == "")
+    		 {
+	    		alert("내용을 입력해주세요");
+	    		return false;
+    		 }
+	    	 
+	    	 
 	    	 $.ajax({
 	    		type: "post",
 	    		url: "guestbook_insert.jsp",
@@ -80,6 +87,31 @@
 	    	 });
 	     });
 	     
+	     $("#write_but").click(function(){
+	    	$("#write_form").show();
+	    	$("#free_list").hide();	   
+	     });
+	     
+	     $("#write_close").click(function(){
+	    	$("#write_form").hide();
+	    	$("#free_list").show();
+	     });
+	     
+	     $("#qnawrite_but").click(function(){
+	    	$("#qnawrite_form").show();
+	    	$("#qna_list").hide();	   
+	     });
+	     
+	     $("#qnawrite_close").click(function(){
+	    	$("#qnawrite_form").hide();
+	    	$("#qna_list").show();
+	     });
+	     
+	     
+	     
+	     
+		     
+	     
 	    
     });
 	
@@ -104,7 +136,7 @@
 						str += "<p>" + s.find("subject").text() + "</p>";
 						str += "</div>";
 					});
-					$("#guest_list").append(str);
+					$("#guest_list").html(str);
 					
 				},
 				statusCode : {
@@ -219,7 +251,7 @@
 			<p id="guest">방명록</p>
 		</div>
 		<div class="text_list" id="freeboard">
-			<div class="free_list">
+			<div class="free_list" id="free_list">
 				<table id="freetable">
 					<tr class="title" style="height: 50px;">
 						<td style="width: 80px;">번호</td>
@@ -229,43 +261,70 @@
 						<td style="width: 80px;">조회수</td>
 					</tr>
 				</table>
-				<div class="but_line">
+				<div class="but_line" id="write_but">
 					<p>글쓰기</p>
 				</div>
 			</div>
-			<div class="freeboard_write">
-				<p>게시판 : 자유 게시판</p>
-				<p>제목 : <input type="text" placeholder="제목을 입력하세요."></p>
+			<div class="freeboard_write" id="write_form">
+				<div class="title">
+					<p>게시판</p> 
+					<p>자유 게시판</p>
+				</div>
+				<div class="title">
+					<p>제목</p>  
+					<p>
+						<input type="text" placeholder="제목을 입력하세요.">
+					</p>
+				</div>
 				<textarea ></textarea>
 				<div class="but_line">
-					<p>확인</p>
-					<p>취소</p>
+					<p id="write_close">취소</p>
+					<p id="write_sub">확인</p>
 				</div>
 			</div>
 		</div>
 		<div class="text_list" id="qaboard">
-			<table id="qnatable">
-				<thead>
-					<tr class="title" style="height: 50px;">
-						<td style="width: 80px;">번호</td>
-						<td style="width: 1000px;">제목</td>
-						<td style="width: 100px;">이름(닉네임)</td>
-						<td style="width: 90px;">작성일</td>
-						<td style="width: 80px;">답변여부</td>
-					</tr>
-				</thead>
-				<tbody>
-				</tbody>
-				<!-- <tr class="info" style="height: 50px;">
-					<td>1</td>
-					<td>제목 나오는 부분</td>
-					<td>작성자</td>
-					<td>2019-10-30</td>
-					<td>O</td>
-				</tr> -->
-			</table>
-			<div class="but_line">
-				<p>글쓰기</p>
+			<div class="qna_list" id="qna_list">
+				<table id="qnatable">
+					<thead>
+						<tr class="title" style="height: 50px;">
+							<td style="width: 80px;">번호</td>
+							<td style="width: 1000px;">제목</td>
+							<td style="width: 100px;">이름(닉네임)</td>
+							<td style="width: 90px;">작성일</td>
+							<td style="width: 80px;">답변여부</td>
+						</tr>
+					</thead>
+					<tbody>
+					</tbody>
+					<!-- <tr class="info" style="height: 50px;">
+						<td>1</td>
+						<td>제목 나오는 부분</td>
+						<td>작성자</td>
+						<td>2019-10-30</td>
+						<td>O</td>
+					</tr> -->
+				</table>
+				<div class="but_line" id="qnawrite_but">
+					<p>글쓰기</p>
+				</div>
+			</div>
+			<div class="qnaboard_write" id="qnawrite_form">
+				<div class="title">
+					<p>게시판</p> 
+					<p>Q & A</p>
+				</div>
+				<div class="title">
+					<p>제목</p>  
+					<p>
+						<input type="text" placeholder="제목을 입력하세요.">
+					</p>
+				</div>
+				<textarea ></textarea>
+				<div class="but_line">
+					<p id="qnawrite_close">취소</p>
+					<p id="qnawrite_sub">확인</p>
+				</div>
 			</div>
 		</div>
 		<div class="text_list" id="guestboard">

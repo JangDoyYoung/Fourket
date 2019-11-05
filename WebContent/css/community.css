@@ -133,3 +133,98 @@
 	padding-bottom: 7px;
 	margin-bottom: 12px;
 }
+
+/* freeboard css 시작 */
+.freeboard_write{
+	width: 750px;
+    margin: 0 auto;
+    border: 1px solid #333;
+    margin-top: 30px;
+    box-sizing: border-box;
+    padding: 20px;
+    display: none;
+}
+.freeboard_write .title{
+	display: flex;
+	
+}
+.freeboard_write .title p{
+	font-size: 14px;
+	height: 40px;
+	line-height: 40px;
+}
+.freeboard_write .title p:nth-of-type(1){
+	width: 100px;
+}
+.freeboard_write .title input{
+	width: 500px;
+	height: 30px;
+	outline: none;	
+	padding-left: 10px;
+	box-sizing: border-box;
+}
+.freeboard_write textarea{
+	width: 100%;
+	resize: none;
+	height: 400px;
+	margin-top: 20px;
+	padding: 10px;
+	outline: none;	
+	box-sizing: border-box;
+}
+.freeboard_write .but_line{
+	margin-top: 25px;
+	float:right;
+	margin-bottom: 50px;
+} 
+.freeboard_write .but_line p{
+	margin-left: 15px;
+}
+
+/* Q&A board css 시작 */
+
+.qnaboard_write{
+	width: 750px;
+    margin: 0 auto;
+    border: 1px solid #333;
+    margin-top: 30px;
+    box-sizing: border-box;
+    padding: 20px;
+    display: none;
+}
+.qnaboard_write .title{
+	display: flex;
+	
+}
+.qnaboard_write .title p{
+	font-size: 14px;
+	height: 40px;
+	line-height: 40px;
+}
+.qnaboard_write .title p:nth-of-type(1){
+	width: 100px;
+}
+.qnaboard_write .title input{
+	width: 500px;
+	height: 30px;
+	outline: none;	
+	padding-left: 10px;
+	box-sizing: border-box;
+}
+.qnaboard_write textarea{
+	width: 100%;
+	resize: none;
+	height: 400px;
+	margin-top: 20px;
+	padding: 10px;
+	outline: none;	
+	box-sizing: border-box;
+}
+.qnaboard_write .but_line{
+	margin-top: 25px;
+	float:right;
+	margin-bottom: 50px;
+} 
+.qnaboard_write .but_line p{
+	margin-left: 15px;
+}
