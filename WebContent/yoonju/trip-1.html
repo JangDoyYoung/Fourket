@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+
+<link href="https://fonts.googleapis.com/css?family=Single+Day&display=swap" rel="stylesheet">
+<!-- font-family: 'Single Day', cursive; -->
+<link href="https://fonts.googleapis.com/css?family=Hi+Melody&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Cute+Font&display=swap" rel="stylesheet">
+<!--    'Cute Font', cursive; -->
+ <link href="https://fonts.googleapis.com/css?family=Srisakdi&display=swap" rel="stylesheet">
+<!-- 		color:#404040;   	font-family: 'Srisakdi', cursive; -->
+<link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+<!-- font-family: 'Righteous', cursive; -->
+<link href="https://fonts.googleapis.com/css?family=Supermercado+One&display=swap" rel="stylesheet">
+<!-- font-family: 'Supermercado One', cursive; -->
+
+
+
+<style type="text/css">
+
+	.text{position:absolute;  left:450px; right:450px; text-align:left; 
+		font-family: 'Single Day', cursive; color:#8c8c8c; font-size:20pt; line-height:40pt;}
+	.title{ position:absolute;   left:450px; text-align:left; 
+			font-family: 'Supermercado One', cursive;  color:#595959; font-size:28pt; }
+	.home{position: fixed;  top:400px; left:50px; width:100px; }
+	
+	.container{
+   		 overflow:hidden;
+   		/* width:1000px; */
+   		position:absolute;
+   		height:700px;
+		left: 200px; right:200px; text-align:center; line-height:100px;
+		top:45px;
+	   /*  border:3px dotted salmon; */
+		}
+		.content_box{
+		    height:100%;
+		    width:100%;
+		}
+		.content{
+		    /* float:left; */
+		    width:98%;
+		    height:103%;
+		    box-sizing:border-box;
+		}
+		
+		
+		.photo{
+			transition: all 1s ease;
+		
+		}
+		
+		.photo:hover{
+			transform: scale(1.6);
+		}
+		
+		.pic{box-shadow: 3px 3px 10px 3px gray ;}
+
+
+</style>
+
+</head>
+
+
+<body style="background-color:black; ">
+		<div id="top"> </div>
+<!-- 화면 왼쪽 홈 버튼 -->
+		<div class="home"> 
+				<a href="../index.jsp"> 
+				<img src="image/fourket.jpg" style="width:70px; text-align:center;" title="메인으로 이동">
+				</a> 
+				<br><br><br>
+				&nbsp;&nbsp;
+				<a href="index-yj.jsp"   title="index yj로 이동">			
+				<span class="glyphicon glyphicon-home"  style="color:white; font-size:40px; text-align:center;"></span>
+				 </a>
+				 <br><br><br>
+				&nbsp;&nbsp;
+				<a href="#top"   title="화면 상단으로 이동">			
+				 <span class="glyphicon glyphicon-menu-up"  style="color:white; font-size:40px; text-align:center;"></span>
+				 </a>
+		</div>
+	
+	
+
+	<div class="container" style="top:45px;">
+			<div class="content_box"> 
+	           	 <div class="content">
+						<a href="#bry"><img src="image/big-bryce.jpg"  alt="picture"  title="브라이스 캐니언 국립공원"  style="width:1000px; height:650px; font-size: 30pt;"></a>
+				</div>
+				<div class="content">
+						<a href="#arc"><img src="image/arches-trimmed.jpg" alt="picture"  title="아치스 캐니언 국립공원" style="width:1000px; height:650px;"></a>
+				</div>
+				<div class="content">
+						<a href="#art"><img src="image/yellowstone-artistpoint.jpg" alt="picture"  title="옐로스톤 국립공원의 아티스트 포인트"  style="width:1000px; height:650px;"></a>
+				</div>
+				<div class="content">
+						<a href="#gra"><img src="image/yellowstone-grandprisma.jpg" alt="picture"  title="옐로스톤 국립공원의 그랜드 프리즈매틱 스프링"  style="width:1000px; height:650px;"></a>
+				</div>
+        </div>
+    </div>
+    
+	<script type="text/javascript">
+			$(function(){    
+			    var $move_width = parseInt( $('.content').css('width') );    
+			    var $content_box = $('.content_box');                  
+			     
+			    
+			    function ani_1(){
+			        animation()                         
+			        setTimeout( ani_2, 2000 + 10 );  
+			    };                                      
+			    function ani_2(){
+			        animation()
+			        setTimeout( ani_1, 2000 + 10 );  
+			    };
+			    ani_1();                    
+			      
+			  
+			    function animation(){
+			        $content_box.children().first().stop()
+			        .animate({ marginLeft : - $move_width }, 1000, "linear", function (){
+			            $(this).appendTo( $(this).parent() ).css({ marginLeft : 0});
+			        });     
+			    }
+			});
+			
+	</script>
+	
+
+	
+	
+	<div class="title" style="top:800px;">Bryce Canyon & Arches Canyon & Yellowstone National Park</div>
+	<div class="text" style="top:900px;">
+	
+			 미국 서부에는 아름다운 국립공원이 많습니다. <br>
+			 그 중에서도 브라이스 캐니언, 아치스 캐니언, 옐로스톤 국립공원 3곳을 제일 추천합니다.<br>
+			 세 곳 다 한국인이 많이 방문하는 LA와 라스베가스에서 거리가 멀지만 그래도 강력 추천합니다.<br><br><br>
+	
+			 			
+			 <div id="bry">
+				<br> 브라이스 캐니언은 가는 기둥이 여러 개 뭉쳐 있어 아기자기하고 화려한 느낌이 나는 캐니언입니다.
+			 </div><br>
+			  <img class="photo" src="image/bryce-1.jpg" alt="picture"   	title="브라이스 캐니언 국립공원" 	style="width:800px; height:500px; margin-left:40px;"> <br>
+			 <br><br><br><br>
+			 			
+			 			
+			 <div id="arc">
+				<br> 아치스 캐니언은 아치 모양의 암석과 거대한 암석이 띄엄띄엄 있어 장엄한 느낌을 줍니다.
+			 </div><br>
+			  <img class="photo" src="image/arches-1.jpg" alt="picture"    title="아치스 캐니언 국립공원" 	 	style="width:800px; height:500px; margin-left:40px;"><br>
+			 <br><br><br><br>
+			 		
+			 			
+			 <div id="art">
+				<br>옐로스톤 국립공원은 화산 활동이 활발해서 온천수가 하늘로 솟구치며 분출하는 것을 매일 볼 수 있고 차를 타면서 들판에 있는 들소(바이슨),곰, 사슴 등 다양한 동물을 구경할 수 있습니다. <br>
+			 	아름다운 계곡인 Artist Point는 일류 화가가 그린 것처럼 너무 아름다운 장소입니다. 하루 종일 그곳에만 있어도 지겹지 않을 정도입니다.
+			 </div><br>
+			  <img class="photo" src="image/artistpoint.jpg" alt="picture"   	title="옐로스톤 국립공원의 아티스트 포인트" 	style="width:800px; height:500px; margin-left:40px;"><br>
+			 <br><br><br><br>
+			 
+			 
+			 <div id="gra" style="margin-right:50px;">
+		 	 <br>
+			 	옐로스톤 국립공원에는 파랑, 노랑, 초록, 빨강 등 무지개처럼 다양한 색을 가진 Grand Prismatic Spring라는 화려한 온천 호수가 있습니다. <br>
+			 	가까이 가면 김이 모락모락 나고 호수가 넓어 사진에 호수 전체를 담기 쉽지 않습니다. 높은 데서 찍은 항공 사진을 인터넷에서 봐야 이 호수의 전체 모습을 알 수 있습니다. 
+			 </div> <br>
+			 <img class="photo" src="image/grandprismatic.jpg" alt="picture"   	title="옐로스톤 국립공원의 그랜드 프리즈매틱 스프링"  	style="width:800px; height:500px; margin-left:40px;"><br>
+			 <br><br><br><br>
+			 
+	</div> 
+
+</body>
+</html>

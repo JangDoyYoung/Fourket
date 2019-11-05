@@ -41,9 +41,9 @@
         </li>
         <li tabindex="4">
           <div>
-            <a href="dy/d_main.html">
-              <h2>Four</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            <a href="yoonju/index-yj.jsp">
+              <h2>여행과 공연</h2>
+              <p>추천 관광지 5곳과 추천 공연 3개</p>
             </a>
           </div>
         </li>
