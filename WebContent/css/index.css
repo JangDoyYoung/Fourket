@@ -1,0 +1,289 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700);
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap');
+
+*{
+	padding: 0;
+	margin: 0;
+}
+@font-face{
+    font-family: PAC-FONT;
+    src:url(../woo/font/PAC-FONT.TTF) format('truetype');
+	} 
+.header{
+	width: 100%;
+	height: 80px;
+}
+.logo{
+	width: 80px;
+	margin-top: 50px;
+	margin-left: 50px;
+}
+.logo img{
+	width: 100%;
+}
+
+/* menu_but css 시작 */
+.menu_but{
+    position: absolute;
+    top: 79px;
+    right: 100px;
+    width: 30px;
+    height: 33px;
+    cursor: pointer;
+}
+.menu_but span{
+    width: 30px;
+    display: block;
+    background: black;
+    position: absolute;
+    transition: .5s;
+}
+.menu_but .sp1{
+    width: 30px;
+    height: 3px;
+    top: 3px;
+}
+.menu_but .sp2{
+    width: 25px;
+    height: 3px;
+    top: 9px;
+}
+.menu_but .sp3{
+    width: 20px;
+    height: 3px;
+    top: 15px;
+}
+.menu_but:hover span{
+    width: 30px;
+}
+
+/* menu_but css 끝 */
+
+
+/*------------side_menu css-------------*/
+        
+.side_menu{
+    border-left: 1px solid #ddd;
+    width: 350px;
+    height: 100vh;
+    box-sizing: border-box;
+    position: fixed;
+    right: -350px;
+    top: 0px;
+    transition: .5s;
+    background: #333;
+    z-index: 100;
+}
+.side_menu .side_nav{
+    margin-top: 100px;
+    margin-left: 50px;
+}
+.side_menu .side_nav p{
+    height: 70px;
+    line-height: 70px;
+    color: #fff;
+    cursor: pointer;
+}
+.close_but{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    cursor: pointer;
+    top: 30px;
+    right: 50px;
+}
+.close_but span{
+    display: block;
+    width: 30px;
+    height: 3px;
+    transform: rotate(45deg);
+    background: #fff;
+    position: absolute;
+    top: 13px;
+    left: 0px;
+}
+.close_but span:nth-of-type(2){
+    transform: rotate(-45deg);
+}
+/*------------side_menu modal css-------------*/
+        
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */                          
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/*------------------------------*/
+
+/* acodian css 시작 */
+.accordion {
+  width: 100%;
+  max-width: 1080px;
+  height: 700px;
+  overflow: hidden;
+  margin: 50px auto;
+  margin-top: 20px;
+}
+.accordion ul {
+  width: 100%;
+    height: 700px;
+  display: table;
+  table-layout: fixed;
+  margin: 0;
+  padding: 0;
+}
+.accordion ul li {
+  display: table-cell;
+  vertical-align: bottom;
+  position: relative;
+  width: 25%;
+  height: 700px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: all 500ms ease;
+}
+.accordion ul li div {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+}
+.accordion ul li div a {
+  display: block;
+  height: 700px;
+  width: 100%;
+  position: relative;
+  z-index: 3;
+  vertical-align: bottom;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  color: #fff;
+  text-decoration: none;
+  font-family: Open Sans, sans-serif;
+  transition: all 200ms ease;
+}
+.accordion ul li div a * {
+  opacity: 0;
+  margin: 0;
+  width: 100%;
+  text-overflow: ellipsis;
+  position: relative;
+  z-index: 5;
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-transform: translateX(-20px);
+  transform: translateX(-20px);
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+}
+.accordion ul li div a h2 {
+  font-family: Montserrat, sans-serif;
+  text-overflow: clip;
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+  top: 160px;
+}
+.accordion ul li div a h3 {
+  font-family: Montserrat, sans-serif;
+  text-overflow: clip;
+  font-size: 50px;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+  top: 160px;
+  transform: rotate(-20deg);
+}
+#idol{
+	font-family: PAC-FONT;
+	font-size: 70px;
+	transform: rotate(-5deg);
+}
+
+.accordion ul li div a p {
+  top: 160px;
+  font-size: 13.5px;
+}
+.accordion ul li:nth-child(1) {
+  background-image: url("../img/joker.jpg");
+  background-size: cover;
+}
+.accordion ul li:nth-child(2) {
+  background-image: url("../img/bg2.jpg");
+  background-size: cover;
+}
+.accordion ul li:nth-child(3) {
+  background-image: url("../img/concert.jpg");
+  background-size: cover;
+}
+.accordion ul li:nth-child(4) {
+  background-image: url("../img/82year2.jpg");
+  background-size: cover;
+}
+
+.accordion ul:hover li, .accordion ul:focus-within li {
+  width: 8%;
+}
+.accordion ul li:focus {
+  outline: none;
+}
+.accordion ul:hover li:hover,
+.accordion ul li:focus, .accordion ul:focus-within li:focus {
+  width: 60%;
+}
+.accordion ul:hover li:hover a,
+.accordion ul li:focus a, .accordion ul:focus-within li:focus a {
+  background: rgba(0, 0, 0, 0.4);
+}
+.accordion ul:hover li:hover a *,
+.accordion ul li:focus a *, .accordion ul:focus-within li:focus a * {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+.accordion ul:hover li {
+  width: 8% !important;
+}
+.accordion ul:hover li a * {
+  opacity: 0 !important;
+}
+.accordion ul:hover li:hover {
+  width: 60% !important;
+}
+.accordion ul:hover li:hover a {
+  background: rgba(0, 0, 0, 0.4);
+}
+.accordion ul:hover li:hover a * {
+  opacity: 1 !important;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+/* acodian css 시작 */

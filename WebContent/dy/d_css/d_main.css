@@ -1,0 +1,45 @@
+body{
+	overflow-x: hidden;
+}
+.remocon{
+	position: fixed;
+	bottom: 300px;
+	right: 50px;
+	z-index: 1;
+}
+.remocon span{
+	display: block;
+	width: 15px;
+	height: 15px;
+	border: 3px solid #fff;
+	border-radius: 50%;
+	margin-bottom: 13px;
+	cursor: pointer;
+	transition: .4s;
+}
+.remocon span:hover{
+	border-color: #31708f;
+}
+
+.movie_box{
+	position: relative;
+	width: 100%;
+	background: #000;
+	text-align: center;
+}
+.movie_box img{
+	height: 100%;
+}
+.movie_box .more_but{
+	position: absolute;
+	bottom: 50px;
+	right: 70px;
+	color: #fff;
+}
+.movie_box .more_but a{
+	color: #fff;
+	text-decoration: none;
+}
+.movie_box .more_but a i{
+	font-size: 30px;
+}

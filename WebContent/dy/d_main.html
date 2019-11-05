@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Fourket : Dy</title>
+<link rel="stylesheet" href="d_css/d_main.css">
+<link rel="stylesheet" href="d_css/fullpage.css">
+<link href="../css/index.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>   <!-- jquery 3.2.1 cdn -->
+<script src="https://kit.fontawesome.com/ed388964d4.js" crossorigin="anonymous"></script> <!-- 폰트어썸 cdn --> 
+<script src="d_js/fullpage.js"></script>  <!-- 원페이지 스크롤 js -->
+</head>
+<body>
+	<div class="container">
+		
+		<div id="fullpage">
+			<div class="section movie_box ">
+				<img src="d_img//joker/movie1.png">	
+				<div class="more_but">
+					<a href="movie1_detail.html">
+						<i class="fab fa-monero"></i>
+					</a>	
+				</div>
+			</div>
+			<div class="section movie_box">
+				<img src="d_img/maleficent/movie2.jpg">
+				<div class="more_but">
+					<a href="movie2_detail.html">
+						<i class="fab fa-monero"></i>
+					</a>	
+				</div>
+			</div>
+			<div class="section movie_box ">
+				<img src="d_img/normal/normal.jpg">
+				<div class="more_but">
+					<a href="movie3_detail.html">
+						<i class="fab fa-monero"></i>
+					</a>	
+				</div>	
+			</div>
+			<div class="section movie_box">
+				<img src="d_img/82year/82year2.jpg">
+				<div class="more_but">
+					<a href="movie4_detail.html">
+						<i class="fab fa-monero"></i>
+					</a>	
+				</div>	
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		
+	</div>
+	
+	
+	
+	<script>
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                //options here
+                licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+                autoScrolling:true,
+                scrollHorizontally: true,
+                //sectionsColor: ['skyblue','#488FC3','#7ABABE','whitesomke'], 
+                //scrollingSpeed: 1000,
+                navigation: true,
+                navigationPosition: 'right',
+                navigationTooltips: ['Joker', 'Maleficent', 'GeminMan','82년생 김지영']
+            });
+        });
+    </script>
+</body>
+</html>

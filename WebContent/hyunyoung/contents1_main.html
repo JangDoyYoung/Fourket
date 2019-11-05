@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".content1").addClass("content_b");
+		// 날짜 클릭 이벤트
+		$("#day1").click(function(){
+			$(".daylist a").removeClass("selected_day");
+			$(this).addClass("selected_day");
+			$(".content1").addClass("content_b");
+			$(".content2").removeClass("content_b");
+			$(".content3").removeClass("content_b");
+		});
+		$("#day2").click(function(){
+			$(".daylist a").removeClass("selected_day");
+			$(this).addClass("selected_day");
+			$(".content2").addClass("content_b");
+			$(".content1").removeClass("content_b");
+			$(".content3").removeClass("content_b");
+		});
+		$("#day3").click(function(){
+			$(".daylist a").removeClass("selected_day");
+			$(this).addClass("selected_day");
+			$(".content3").addClass("content_b");
+			$(".content2").removeClass("content_b");
+			$(".content1").removeClass("content_b");
+		});
+						
+	});
+	
+</script>
+<style>
+	#main div
+	{
+		border: 0px solid gray;
+	}
+ 	.mimg
+ 	{
+ 		width: 100%;
+ 		height: 500px;
+ 		background-image: url('image/main_img.jpg');
+ 		background-repeat: no-repeat;
+ 		background-size: cover;
+ 	}
+ 	.mimg_title
+ 	{
+ 		position: relative;
+ 		top: 370px;
+ 		margin-right: 100px;
+ 		float: right;
+ 		color: white;
+ 		text-shadow: 4px 2px 2px gray;
+ 	}
+ 	.days
+ 	{
+ 		height: 100px;
+ 		text-align: center;
+ 	}
+ 	.daylist
+ 	{
+ 		position: relative;
+ 		top: 28px;
+ 	}
+ 	.daylist>a
+	{
+		color: #E2E1E6;
+		text-decoration: none;
+		cursor: pointer;
+		font-size: 20px;
+	}
+	.daylist>a:hover
+	{
+		cursor: pointer;
+		text-shadow: 2px 1px 1px #E2E1E6;
+	}
+	#daylist .selected_day
+	{
+		color: black;
+		font-size: 2em;
+		font-weight: bold;
+		text-shadow: 2px 1px 1px gray;
+	}
+	
+ 	.day_contents
+ 	{
+ 		width: 100%;
+ 		text-align: center;
+ 	}
+	.content1
+ 	{
+ 		display: none;
+ 	}
+ 	.content2
+ 	{
+ 		display: none;
+ 	}
+ 	.content3
+ 	{
+ 		display: none;
+ 	}
+ 	.content_b
+ 	{
+ 		display: block;
+ 	}
+ 	.day_title
+ 	{
+ 		height: 50px;
+ 		text-align: center;
+ 	}
+ 	.daytitletext
+ 	{
+ 		position: relative;
+ 		top: 15px;
+ 	}
+ 	.day_route
+ 	{
+ 		height: 100px;
+ 		text-align: center;
+ 	}
+ 	.routetext
+ 	{
+ 		position: relative;
+ 		top: 38px;
+ 	}
+ 	.day_content
+ 	{
+ 		margin: 0 auto;
+ 		width: 800px;
+	}
+	
+ 	
+</style>
+
+<body>
+	<div id="main">
+		<div class="mimg">
+			<div class="mimg_title">
+				<h1>교토의 가을, 산책해볼까...</h1>
+			</div>
+		</div>
+		<div class="schedual">
+			<div  class="days">
+				<div id="daylist" class="daylist">
+					<a id="day1" class="selected_day">Day 1</a>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<a id="day2">Day 2</a>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<a id="day3">Day 3</a>
+				</div>
+			</div>
+			<div class="day_contnets">
+				<div class="content1">
+					<div class="day_title">
+						<span class="daytitletext">동네산책</span>
+					</div>
+					<div class="day_route">
+						<span class="routetext">인천공항 - 칸사이국제공항 - 교토역 - 숙소 - 청수사</span>
+					</div>
+					<div class="day_content">
+						<p>
+							일본 여행이 처음이 아니지만 그래도 북해도는 처음이었고 넓은 지역을 편하게 다닐 
+							생각으로 렌트까지 했었다. 이동거리는 생각보다 엄청났고 그 덕에 나는 피로회복제를 
+							먹으면서까지 운전을 했던 기억이 났다. 너무나 가고 싶었던 하코다테를 갔으나 무리한 
+							일정 탓이었을까 천천히 둘러보지 못해 뭔가 아쉬움이 많이 남았던 여행이었다.
+						</p>
+						<p>
+							이번에는 혼자 가는 여행이고 가볍게 다녀오자는 생각에 아무 일정도 없이, 호텔 
+							예약도 없이, 렌트도 없이 (생각해보면 제정신이 아닌 듯;) 백팩에 짐을 쑤셔 넣고는 
+							공항으로 출발했다. 수화물 짐이 없다 보니 용량이 큰 내 화장품들은 모두 출국거부를 
+							당하고 (비행기 시간 촉박한데) 뛰어 뛰어 힘들게 비행기에 몸을 싣고 삿포로로 향했다.
+						</p>
+					</div>
+				</div>
+				<div class="content2">
+					<div class="day_title">
+						<span class="daytitletext">단풍이 빨갛게 된 곳으로</span>
+					</div>
+					<div class="day_route">
+						<span class="routetext">인천공항 - 칸사이국제공항 - 교토역 - 숙소 - 청수사</span>
+					</div>
+					<div class="day_content">
+						<p>
+							일본 여행이 처음이 아니지만 그래도 북해도는 처음이었고 넓은 지역을 편하게 다닐 
+							생각으로 렌트까지 했었다. 이동거리는 생각보다 엄청났고 그 덕에 나는 피로회복제를 
+							먹으면서까지 운전을 했던 기억이 났다. 너무나 가고 싶었던 하코다테를 갔으나 무리한 
+							일정 탓이었을까 천천히 둘러보지 못해 뭔가 아쉬움이 많이 남았던 여행이었다.
+						</p>
+						<p>
+							이번에는 혼자 가는 여행이고 가볍게 다녀오자는 생각에 아무 일정도 없이, 호텔 
+							예약도 없이, 렌트도 없이 (생각해보면 제정신이 아닌 듯;) 백팩에 짐을 쑤셔 넣고는 
+							공항으로 출발했다. 수화물 짐이 없다 보니 용량이 큰 내 화장품들은 모두 출국거부를 
+							당하고 (비행기 시간 촉박한데) 뛰어 뛰어 힘들게 비행기에 몸을 싣고 삿포로로 향했다.
+						</p>
+					</div>
+				</div>
+				<div class="content3">
+					<div class="day_title">
+						<span class="daytitletext">집에 가자</span>
+					</div>
+					<div class="day_route">
+						<span class="routetext">인천공항 - 칸사이국제공항 - 교토역 - 숙소 - 청수사</span>
+					</div>
+					<div class="day_content">
+						<p>
+							일본 여행이 처음이 아니지만 그래도 북해도는 처음이었고 넓은 지역을 편하게 다닐 
+							생각으로 렌트까지 했었다. 이동거리는 생각보다 엄청났고 그 덕에 나는 피로회복제를 
+							먹으면서까지 운전을 했던 기억이 났다. 너무나 가고 싶었던 하코다테를 갔으나 무리한 
+							일정 탓이었을까 천천히 둘러보지 못해 뭔가 아쉬움이 많이 남았던 여행이었다.
+						</p>
+						<p>
+							이번에는 혼자 가는 여행이고 가볍게 다녀오자는 생각에 아무 일정도 없이, 호텔 
+							예약도 없이, 렌트도 없이 (생각해보면 제정신이 아닌 듯;) 백팩에 짐을 쑤셔 넣고는 
+							공항으로 출발했다. 수화물 짐이 없다 보니 용량이 큰 내 화장품들은 모두 출국거부를 
+							당하고 (비행기 시간 촉박한데) 뛰어 뛰어 힘들게 비행기에 몸을 싣고 삿포로로 향했다.
+						</p>
+					</div>
+				</div>
+				<!-- <div class="day_contents2">
+					<div class="day_title">
+					</div>
+					<div class="day_route">
+					</div>
+					<div class="day_content">
+					</div>
+				</div>
+				<div class="day_contents3">
+					<div class="day_title">
+					</div>
+					<div class="day_route">
+					</div>
+					<div class="day_content">
+					</div>
+				</div> -->
+			</div>
+		</div>
+	</div>
+
+	
+
+</body>
+</html>

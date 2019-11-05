@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<transport>
+	<route1>
+		<time>2시간</time>
+		<price>298000원</price>
+	</route1>
+	<route2>
+		<time>2시간</time>
+		<price>1600엔</price>
+		<check>icoca카드구입</check>
+	</route2>
+	<route3>
+		<time>10분</time>
+		<price>570엔</price>
+		<check>현금준비</check>
+	</route3>
+	<route4>
+		<time>8분</time>
+		<price>무료</price>
+		<check>기요미즈고조역</check>
+	</route4>
+	<route5>
+		<time>30분</time>
+		<price>230엔</price>
+		<check>도보1키로산행</check>
+	</route5>
+	<route6>
+		<time>11분</time>
+		<price>무료</price>
+		<check>미다라시당고</check>
+	</route6>
+	<route7>
+		<time>30분</time>
+		<price>230엔</price>
+		<check>블루보틀들리기</check>
+	</route7>
+	<route8>
+		<time>35분</time>
+		<price>380엔</price>
+	</route8>
+</transport>

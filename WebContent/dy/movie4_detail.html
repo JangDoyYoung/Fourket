@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Fourket : 82년생 김지영</title>
+<link rel="stylesheet" href="d_css/movie4_detail.css">
+<link href="../css/index.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>   <!-- jquery 3.2.1 cdn -->
+<script>
+	$(window).on("scroll",function(){
+		if($(window).scrollTop() > 500 )
+		{
+			$(".actors_img").css("left","500px");
+		}
+		
+		if($(window).scrollTop() > 600 )
+		{
+			$(".actors_img2").css("right","550px");
+		}
+		
+		if($(window).scrollTop() > 700 )
+		{
+			$(".actors_img3").css("left","500px");
+		}
+		
+		if($(window).scrollTop() > 800 )
+		{
+			$(".actors_img4").css("right","550px");
+		}
+	});
+</script>
+</head>
+<body>
+	<div class="container">
+		<div class="iframe_box">
+			<iframe id="ifr" src="https://www.youtube.com/embed/Gz0ZeY1U4vY?autoplay=1" frameborder="0"  allowfullscreen></iframe>
+		<div class="actors actors1">
+			<div class="dark_bg"></div>
+			<p class="title">Acotrs</p>
+			<div class="actors_img actors_hover">
+				<img class="d_img" src="d_img/82year/jung.png">
+				<img class="h_img" src="d_img/82year/jung2.png">
+				<p class="d_name">정유미</p>
+				<p class="h_name">지영</p>
+			</div>
+			<div class="actors_img2 actors_hover">
+				<img class="d_img" src="d_img/82year/gong.png">
+				<img class="h_img" src="d_img/82year/gong2.png">
+				<p class="d_name">공유</p>
+				<p class="h_name">대현</p>
+			</div>
+			<div class="actors_img3 actors_hover">
+				<img class="d_img" src="d_img/82year/kim.png">
+				<img class="h_img" src="d_img/82year/kim2.png">
+				<p class="d_name">조미경</p>
+				<p class="h_name">미숙</p>
+			</div>
+			<div class="actors_img4 actors_hover">
+				<img class="d_img" src="d_img/82year/gongjung.png">
+				<img class="h_img" src="d_img/82year/gongjung2.png">
+				<p class="d_name">공민정</p>
+				<p class="h_name">김민정</p>
+			</div>
+		</div>
+		<div class="actors actors2">
+			<div class="dark_bg"></div>
+		</div>
+		<div class="actors actors3">
+			<div class="dark_bg"></div>
+			<p class="title">Summary</p>
+			<p class="summary">
+				<span> 1982년 봄에 태어나</span>
+				<span>  누군가의 딸이자 아내, 동료이자 엄마로 </span>
+				<span>  2019년 오늘을 살아가는 ‘지영’(정유미).</span>
+				<span>   때론 어딘가 갇힌 듯 답답하기도 하지만</span>
+				<span>   남편 ‘대현’(공유)과 사랑스러운 딸,</span>
+				<span>   그리고 자주 만나지 못해도 항상 든든한 가족들이 ‘지영’에겐 큰 힘이다.</span>
+			 </p>
+		</div>
+		<div class="actors actors4">
+			<div class="dark_bg"></div>
+			<a class="other_go" href="d_main.html">Other Watching</a>
+		</div>
+	</div>
+</body>
+</html>

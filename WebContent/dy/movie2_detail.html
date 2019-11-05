@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Fourket : 말레피센트2</title>
+<link rel="stylesheet" href="d_css/movie2_detail.css">
+<link href="../css/index.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>   <!-- jquery 3.2.1 cdn -->
+<script>
+	$(window).on("scroll",function(){
+		if($(window).scrollTop() > 500 )
+		{
+			$(".actors_img").css("left","500px");
+		}
+		
+		if($(window).scrollTop() > 600 )
+		{
+			$(".actors_img2").css("right","550px");
+		}
+		
+		if($(window).scrollTop() > 700 )
+		{
+			$(".actors_img3").css("left","500px");
+		}
+		
+		if($(window).scrollTop() > 800 )
+		{
+			$(".actors_img4").css("right","550px");
+		}
+	});
+</script>
+</head>
+<body>
+	<div class="container">
+		<div class="iframe_box">
+			<iframe id="ifr" src="https://www.youtube.com/embed/sXjwpMDrMnY?autoplay=1" frameborder="0"  allowfullscreen></iframe>
+		</div>
+		<div class="actors actors1">
+			<div class="dark_bg"></div>
+			<p class="title">Acotrs</p>
+			<div class="actors_img actors_hover">
+				<img class="d_img" src="d_img/maleficent/angelina.png">
+				<img class="h_img" src="d_img/maleficent/angelina2.png">
+				<p class="d_name">Angelina Jolie</p>
+				<p class="h_name">MaleFicent</p>
+			</div>
+			<div class="actors_img2 actors_hover">
+				<img class="d_img" src="d_img/maleficent/elle.png">
+				<img class="h_img" src="d_img/maleficent/elle2.png">
+				<p class="d_name">Elle Fanning</p>
+				<p class="h_name">Aurora</p>
+			</div>
+			<div class="actors_img3 actors_hover">
+				<img class="d_img" src="d_img/maleficent/michelle.png">
+				<img class="h_img" src="d_img/maleficent/michelle2.png">
+				<p class="d_name">Michelle Pfeiffer</p>
+				<p class="h_name">Ingress</p>
+			</div>
+			<div class="actors_img4 actors_hover">
+				<img class="d_img" src="d_img/maleficent/chiwetel.png">
+				<img class="h_img" src="d_img/maleficent/chiwetel2.png">
+				<p class="d_name">Chiwetel Ejiofor</p>
+				<p class="h_name">Cornull</p>
+			</div>
+		</div>
+		<div class="actors actors2">
+			<div class="dark_bg"></div>
+		</div>
+		<div class="actors actors3">
+			<div class="dark_bg"></div>
+			<p class="title">Summary</p>
+			<p class="summary">
+				<span style="font-weight: bold;">동화는 끝났다!<br>
+				두 세계의 운명을 건 가장 사악한 전쟁이 시작된다!</span>
+				<span>강력한 어둠의 지배자이자 무어스 숲의 수호자 ‘말레피센트’는 딸처럼 돌봐온 ‘오로라’와 </span>
+				<span>‘필립 왕자’의 결혼 약속으로 인간 세계의 ‘잉그리스 왕비’와 대립하게 된다.</span>
+			 	<span> 이에 요정과 인간의 오랜 연합이 깨지고 숨겨진 요정 종족 </span>
+			 	<span>다크페이의 리더 ‘코널’까지 등장하면서 두 세계는 피할 수 없는 거대한 전쟁에 휘말리게 되는데…..</span>
+			 </p>
+		</div>
+		<div class="actors actors4">
+			<div class="dark_bg"></div>
+			<a class="other_go" href="d_main.html">Other Watching</a>
+		</div>
+	</div>
+</body>
+</html>

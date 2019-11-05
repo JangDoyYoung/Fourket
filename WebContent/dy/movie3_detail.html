@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Fourket : 가장 보통의 연애</title>
+<link rel="stylesheet" href="d_css/movie3_detail.css">
+<link href="../css/index.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>   <!-- jquery 3.2.1 cdn -->
+<script>
+	$(window).on("scroll",function(){
+		if($(window).scrollTop() > 500 )
+		{
+			$(".actors_img").css("left","500px");
+		}
+		
+		if($(window).scrollTop() > 600 )
+		{
+			$(".actors_img2").css("right","550px");
+		}
+		
+		if($(window).scrollTop() > 700 )
+		{
+			$(".actors_img3").css("left","500px");
+		}
+		
+		if($(window).scrollTop() > 800 )
+		{
+			$(".actors_img4").css("right","550px");
+		}
+	});
+</script>
+</head>
+<body>
+	<div class="container">
+		<div class="iframe_box">
+			<iframe id="ifr" src="https://www.youtube.com/embed/0uC2FaZ4h1I?autoplay=1" frameborder="0"  allowfullscreen></iframe>
+		<div class="actors actors1">
+			<div class="dark_bg"></div>
+			<p class="title">Acotrs</p>
+			<div class="actors_img actors_hover">
+				<img class="d_img" src="d_img/normal/kim.png">
+				<img class="h_img" src="d_img/normal/kim2.png">
+				<p class="d_name">김래원</p>
+				<p class="h_name">재훈</p>
+			</div>
+			<div class="actors_img2 actors_hover">
+				<img class="d_img" src="d_img/normal/gong.png">
+				<img class="h_img" src="d_img/normal/gong2.png">
+				<p class="d_name">공효진</p>
+				<p class="h_name">선영</p>
+			</div>
+			<div class="actors_img3 actors_hover">
+				<img class="d_img" src="d_img/normal/gang.png">
+				<img class="h_img" src="d_img/normal/gang2.png">
+				<p class="d_name">강기영</p>
+				<p class="h_name">병철</p>
+			</div>
+			<div class="actors_img4 actors_hover">
+				<img class="d_img" src="d_img/normal/jung.png">
+				<img class="h_img" src="d_img/normal/jung2.png">
+				<p class="d_name">정웅인</p>
+				<p class="h_name">관수</p>
+			</div>
+		</div>
+		<div class="actors actors2">
+			<div class="dark_bg"></div>
+		</div>
+		<div class="actors actors3">
+			<div class="dark_bg"></div>
+			<p class="title">Summary</p>
+			<p class="summary">
+				<span> 만난 지 하루 만에 일보다 서로의 연애사를 더 잘 알게 된 두 사람.</span>
+				<span> 하지만 미묘한 긴장과 어색함도 잠시 </span>
+				<span> ‘한심하다’, ‘어이없다’ 부딪히면서도 마음이 쓰이는 건 왜 그럴까?</span>
+			 </p>
+		</div>
+		<div class="actors actors4">
+			<div class="dark_bg"></div>
+			<a class="other_go" href="d_main.html">Other Watching</a>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Fourket : 조커</title>
+<link rel="stylesheet" href="d_css/movie1_detail.css">
+<link href="../css/index.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>   <!-- jquery 3.2.1 cdn -->
+<script>
+	$(window).on("scroll",function(){
+		if($(window).scrollTop() > 500 )
+		{
+			$(".actors_img").css("left","500px");
+		}
+		
+		if($(window).scrollTop() > 600 )
+		{
+			$(".actors_img2").css("right","550px");
+		}
+		
+		if($(window).scrollTop() > 700 )
+		{
+			$(".actors_img3").css("left","500px");
+		}
+		
+		if($(window).scrollTop() > 800 )
+		{
+			$(".actors_img4").css("right","550px");
+		}
+	});
+</script>
+</head>
+<body>
+	<div class="container">
+		<!-- <video oncontextmenu="return false;" id="myVideo"  controls autoplay>
+		  <source src="d_video/joker_movie.mp4" type="video/mp4">
+		</video> -->
+		<div class="iframe_box">
+			<iframe id="ifr" src="https://www.youtube.com/embed/x60mB0zXZ38?autoplay=1" frameborder="0"  allowfullscreen></iframe>
+		</div>
+		<div class="actors actors1">
+			<div class="dark_bg"></div>
+			<p class="title">Acotrs</p>
+			<div class="actors_img actors_hover">
+				<img class="d_img" src="d_img/joker/joaquin.png">
+				<img class="h_img" src="d_img/joker/joaquin2.png">
+				<p class="d_name">Joaquin Phoenix</p>
+				<p class="h_name">Arthur Fleck</p>
+			</div>
+			<div class="actors_img2 actors_hover">
+				<img class="d_img" src="d_img/joker/zazie.png">
+				<img class="h_img" src="d_img/joker/zazie2.png">
+				<p class="d_name">Zazie Beetz</p>
+				<p class="h_name">Sophie Dumond</p>
+			</div>
+			<div class="actors_img3 actors_hover">
+				<img class="d_img" src="d_img/joker/frances.png">
+				<img class="h_img" src="d_img/joker/frances2.png">
+				<p class="d_name">Frances Conroy</p>
+				<p class="h_name">Penny Fleck</p>
+			</div>
+			<div class="actors_img4 actors_hover">
+				<img class="d_img" src="d_img/joker/robert.png">
+				<img class="h_img" src="d_img/joker/robert2.png">
+				<p class="d_name">Robert De Niro</p>
+				<p class="h_name">Murray Franklin</p>
+			</div>
+		</div>
+		<div class="actors actors2">
+			<div class="dark_bg"></div>
+		</div>
+		<div class="actors actors3">
+			<div class="dark_bg"></div>
+			<p class="title">Summary</p>
+			<p class="summary">
+				<span style="font-weight: bold;">“내 인생이 비극인줄 알았는데, 코미디였어”</span>
+				<span>고담시의 광대 아서 플렉은 코미디언을 꿈꾸는 남자.</span>
+				<span>하지만 모두가 미쳐가는 코미디 같은 세상에서</span>
+			 	<span>맨 정신으로는 그가 설 자리가 없음을 깨닫게 되는데…</span>
+			 	<span>이제껏 본 적 없는 진짜 ‘조커’를 만나라!</span>
+			 </p>
+		</div>
+		<div class="actors actors4">
+			<div class="dark_bg"></div>
+			<a class="other_go" href="d_main.html">Other Watching</a>
+		</div>
+	</div>
+</body>
+</html>
