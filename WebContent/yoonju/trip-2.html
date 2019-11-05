@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+
+<link href="https://fonts.googleapis.com/css?family=Single+Day&display=swap" rel="stylesheet">
+<!-- font-family: 'Single Day', cursive; -->
+<link href="https://fonts.googleapis.com/css?family=Hi+Melody&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Cute+Font&display=swap" rel="stylesheet">
+<!--    'Cute Font', cursive; -->
+ <link href="https://fonts.googleapis.com/css?family=Srisakdi&display=swap" rel="stylesheet">
+<!-- 		color:#404040;   	font-family: 'Srisakdi', cursive; -->
+<link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+<!-- font-family: 'Righteous', cursive; -->
+<link href="https://fonts.googleapis.com/css?family=Supermercado+One&display=swap" rel="stylesheet">
+<!-- font-family: 'Supermercado One', cursive; -->
+
+
+
+<style type="text/css">
+
+	.text{position:absolute;  left:450px; right:450px; text-align:left; 
+		font-family: 'Single Day', cursive; color:#8c8c8c; font-size:20pt; line-height:40pt;}
+	.title{ position:absolute;   left:450px; text-align:left; 
+			font-family: 'Supermercado One', cursive;  color:#595959; font-size:28pt; }
+	.home{position: fixed;  top:400px; left:50px; width:100px; }
+	
+	.container{
+   		 overflow:hidden;
+   		/* width:1000px; */
+   		position:absolute;
+   		height:700px;
+		left: 200px; right:200px; text-align:center; line-height:100px;
+		top:45px;
+	   /*  border:3px dotted salmon; */
+		}
+		.content_box{
+		    height:105%;
+		    width:100%;
+		}
+		.content{
+		    /* float:left; */
+		    width:105%;
+		    height:100%;
+		    box-sizing:border-box;
+		}
+		
+		
+		.photo{
+			transition: all 1s ease;
+		
+		}
+		
+		.photo:hover{
+			transform: scale(1.6);
+		}
+		
+		
+		.pic{box-shadow: 3px 3px 10px 3px gray ;}
+
+</style>
+
+</head>
+
+
+<body style="background-color:black; ">
+		<div id="top"> </div>
+<!-- 화면 왼쪽 홈 버튼 -->
+		<div class="home"> 
+				<a href="../index.jsp"> 
+				<img src="image/fourket.jpg" style="width:70px; text-align:center;" title="메인으로 이동">
+				</a> 
+				<br><br><br>
+				&nbsp;&nbsp;
+				<a href="index-yj.jsp"   title="index yj로 이동">			
+				<span class="glyphicon glyphicon-home"  style="color:white; font-size:40px; text-align:center;"></span>
+				 </a>
+				 <br><br><br>
+				&nbsp;&nbsp;
+				<a href="#top"   title="화면 상단으로 이동">			
+				 <span class="glyphicon glyphicon-menu-up"  style="color:white; font-size:40px; text-align:center;"></span>
+				 </a>
+		</div>
+	
+	
+
+	<div class="container" style="top:45px;">
+			<div class="content_box"> 
+	           	 <div class="content">
+						<a href="#blue"><img class="pic" src="image/capri03.jpg"  alt="picture"  title="푸른 동굴"  style="width:1000px; height:650px; font-size: 30pt;"></a>
+				</div>
+				<div class="content">
+						<a href="#green"><img class="pic"  src="image/2.jpg" alt="picture"  title="Green grotto" style="width:1000px; height:650px;"></a>
+				</div>
+				<div class="content">
+						<a href="#garden"><img class="pic"  src="image/capri07.jpg" alt="picture"  title="아우구스투스의 정원"  style="width:1000px; height:650px;"></a>
+				</div>
+				<div class="content">
+						<a href="#fara"><img class="pic"  src="image/faraglioni.jpg" alt="picture"  title="Faraglioni"  style="width:1000px; height:650px;"></a>
+				</div>
+				<div class="content">
+						<a href="#street"><img class="pic"  src="image/capri-town2.jpg" alt="picture"  title="길거리"  style="width:1000px; height:650px;"></a>
+				</div>
+        </div>
+    </div>
+    
+	<script type="text/javascript">
+			$(function(){    
+			    var $move_width = parseInt( $('.content').css('width') );    
+			    var $content_box = $('.content_box');                  
+			     
+			    
+			    function ani_1(){
+			        animation()                         
+			        setTimeout( ani_2, 2000 + 10 );  
+			    };                                      
+			    function ani_2(){
+			        animation()
+			        setTimeout( ani_1, 2000 + 10 );  
+			    };
+			    ani_1();                    
+			      
+			  
+			    function animation(){
+			        $content_box.children().first().stop()
+			        .animate({ marginLeft : - $move_width }, 1000, "linear", function (){
+			            $(this).appendTo( $(this).parent() ).css({ marginLeft : 0});
+			        });     
+			    }
+			});
+			
+	</script>
+	
+
+	
+	
+	<div class="title" style="top:800px;">Capri Island in Italy</div>
+	<div class="text" style="top:900px;">
+	
+			 이탈리아에는 아름다운 관광지가 많습니다. <br>
+			 그 중에서도 로마 황제들이 아꼈던 카프리 섬을 제일 추천합니다.<br>
+			 소렌토, 포지타노, 아말피 등 지역에서 페리를 타고 가야 해서 교통편이 불편하지만 그래도 추천합니다.<br><br><br>
+	
+			 			
+			 <div id="blue">
+				<br> 그 유명한 푸른 동굴(Blue Grotto)입니다. 날씨와 파도가 허락하지 않아 저는 못 갔습니다.
+			 </div><br>
+			  <img class="photo" src="image/capri04.jpeg" alt="picture"   	title="푸른 동굴"  	style="width:800px; height:500px; margin-left:40px;"> <br>
+			 <br><br><br><br>
+			 			
+			 			
+			 <div id="green">
+				<br> 페리를 타고 섬 주변을 한 바퀴 도는 투어에서 Green Grotto를 만났습니다. 
+			 </div><br>
+			  <img class="photo" src="image/capri11.jpg" alt="picture"   	title="Green grotto"  	style="width:800px; height:500px; margin-left:40px;"><br>
+			 <br><br><br><br>
+			 		
+			 
+			 <div id="fara">
+				<br>섬 주변을 도는 페리 투어에서 Faraglioni 바위도 인기있습니다.  <br>
+			 	
+			 </div><br>
+			  <img class="photo" src="image/faraglioni.jpg" alt="picture"   title="Faraglioni" 		style="width:800px; height:500px; margin-left:40px;"><br>
+			 <br><br><br><br>
+			 
+			 
+			 			
+			 <div id="garden">
+				<br>아우구스투스의 정원은 정원 내부도 볼만하지만 정원에서 내려다보는 바다 절경이 환상적입니다. <br>
+			 	
+			 </div><br>
+			  <img class="photo" src="image/capri.jpg" alt="picture"   title="아우구스투스의 정원에서 본 바다"   	style="width:800px; height:500px; margin-left:40px;"><br>
+			 <br><br><br><br>
+			 
+			 
+			 <div id="street" style="margin-right:50px;">
+		 	 <br>
+			 	 카프리 섬에는 예쁜 건물, 예쁜 꽃이 많습니다.  부자들의 별장이 많고 고급스러운 인테리어의 매장이 많아 건물 구경하는 재미도 있습니다. <br>
+			 	 그래서 카프리는 자연 경관과 건물 모두 훌륭한 섬입니다. 왜 로마 황제들이 카프리 섬을 사랑했는지 알 것 같습니다.
+			 </div> <br>
+			 <img class="photo" src="image/capri-town.jpg" alt="picture"   	title="길거리"  	style="width:800px; height:500px; margin-left:40px;"><br>
+			 <br><br><br><br>
+			 
+	</div> 
+
+</body>
+</html>

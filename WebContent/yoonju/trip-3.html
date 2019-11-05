@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+
+<link href="https://fonts.googleapis.com/css?family=Single+Day&display=swap" rel="stylesheet">
+<!-- font-family: 'Single Day', cursive; -->
+<link href="https://fonts.googleapis.com/css?family=Hi+Melody&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Cute+Font&display=swap" rel="stylesheet">
+<!--    'Cute Font', cursive; -->
+ <link href="https://fonts.googleapis.com/css?family=Srisakdi&display=swap" rel="stylesheet">
+<!-- 		color:#404040;   	font-family: 'Srisakdi', cursive; -->
+<link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+<!-- font-family: 'Righteous', cursive; -->
+<link href="https://fonts.googleapis.com/css?family=Supermercado+One&display=swap" rel="stylesheet">
+<!-- font-family: 'Supermercado One', cursive; -->
+
+
+
+<style type="text/css">
+
+	.text{position:absolute;  left:480px; right:450px; text-align:left; 
+		font-family: 'Single Day', cursive; color:#8c8c8c; font-size:20pt; line-height:40pt;}
+	.title{ position:absolute;   left:480px; text-align:left; 
+			font-family: 'Supermercado One', cursive;  color:#595959; font-size:28pt; }
+	.home{position: fixed;  top:400px; left:50px; width:100px; }
+	
+	.container{
+   		 overflow:hidden;
+   		/* width:1000px; */
+   		position:absolute;
+   		height:700px;
+		left: 200px; right:200px; text-align:center; line-height:100px;
+		top:45px;
+	   /*  border:3px dotted salmon; */
+		}
+		.content_box{
+		    height:105%;
+		    width:100%; }
+		.content{
+		    /* float:left; */
+		    width:105%;
+		    height:100%;
+		    box-sizing:border-box;	}
+		
+		
+		.photo{
+			transition: all 1s ease;		
+		}
+		
+		.photo:hover{
+			transform: scale(1.6);
+		}
+		
+/* 		사진 둘러싼 그림자. 세번재 숫자가 클수록 그림자가 진해진다. */		
+		.pic{box-shadow: 3px 3px 10px 3px gray ;}
+
+</style>
+
+</head>
+
+
+<body style="background-color:black; ">
+		<div id="top"> </div>
+<!-- 화면 왼쪽 홈 버튼 -->
+		<div class="home"> 
+				<a href="../index.jsp"> 
+				<img src="image/fourket.jpg" style="width:70px; text-align:center;" title="메인으로 이동">
+				</a> 
+				<br><br><br>
+				&nbsp;&nbsp;
+				<a href="index-yj.jsp"   title="index yj로 이동">			
+				<span class="glyphicon glyphicon-home"  style="color:white; font-size:40px; text-align:center;"></span>
+				 </a>
+				 <br><br><br>
+				&nbsp;&nbsp;
+				<a href="#top"   title="화면 상단으로 이동">			
+				 <span class="glyphicon glyphicon-menu-up"  style="color:white; font-size:40px; text-align:center;"></span>
+				 </a>
+		</div>
+	
+	
+
+	<div class="container" style="top:45px;">
+			<div class="content_box"> 
+	           	 <div class="content">
+						<a href="#blue"><img class="pic"  src="image/santo09.jpg"  alt="picture"  title="마을 전경"  style="width:1000px; height:650px; font-size: 30pt;"></a>
+				</div>
+				<div class="content">
+						<a href="#oia"><img class="pic" src="image/santo01.jpg" alt="picture"  title="이아 마을 내부" style="width:1000px; height:650px;"></a>
+				</div>
+				<div class="content">
+						<a href="#sunset"><img class="pic" src="image/santo06.jpg" alt="picture"  title="석양"  style="width:1000px; height:650px;"></a>
+				</div>
+				<div class="content">
+						<a href="#town"><img class="pic" src="image/santo07.jpg" alt="picture"  title="이아 마을 내부"  style="width:1000px; height:650px;"></a>
+				</div>
+				<div class="content">
+						<a href="#sea"><img class="pic" src="image/santo05.jpg" alt="picture"  title="바다"  style="width:1000px; height:650px;"></a>
+				</div>
+        </div>
+    </div>
+    
+	<script type="text/javascript">
+			$(function(){    
+			    var $move_width = parseInt( $('.content').css('width') );    
+			    var $content_box = $('.content_box');                  
+			     
+			    
+			    function ani_1(){
+			        animation()                         
+			        setTimeout( ani_2, 2000 + 10 );  
+			    };                                      
+			    function ani_2(){
+			        animation()
+			        setTimeout( ani_1, 2000 + 10 );  
+			    };
+			    ani_1();                    
+			      
+			  
+			    function animation(){
+			        $content_box.children().first().stop()
+			        .animate({ marginLeft : - $move_width }, 1000, "linear", function (){
+			            $(this).appendTo( $(this).parent() ).css({ marginLeft : 0});
+			        });     
+			    }
+			});
+			
+	</script>
+	
+
+
+
+	
+	
+	<div class="title" style="top:800px;">Santorini Island in Greece</div>
+	<div class="text" style="top:900px;">
+	
+			 신혼부부가 즐겨찾는 유명한 관광지가 많습니다. <br>
+			 그 중에서 하얀 벽과 파란 지붕 건물로 유명한 산토리니 섬을 추천합니다.<br>
+			 한국에서 아테네로 가는 직항이 없어서  최소 비행기를 2번 타야하지만 그래도 추천합니다.<br><br><br>
+	
+			 			
+			 <div id="blue">
+				<br> 산토리니는 화산섬이고 하얀 건물과 바다가 조화를 이루어 사진 찍을 곳이 많습니다. 이아 마을에 하얀 건물이 가장 많습니다. 
+			 </div><br>
+			  <img class="photo" src="image/santo08.jpg" alt="picture"   title="마을 전경" 	 	style="width:800px; height:500px; margin-left:40px;"> <br>
+			 <br><br><br><br>
+			 			
+			 			
+			 <div id="oia">
+				<br> 산토리니의 5개 마을 중에서 이아 마을이 제일 아름답습니다. 이아 마을에 가기 전에 다른 마을에 오래 있었다가 후회했습니다. 
+				 산토리니에 잠깐 머무르면 이아 마을에 제일 먼저 가고 시간을 많이 할당하시길 추천합니다. <br> 
+				동화 속에 나올 것 같은 건물이 많아 사진 찍을 곳이 많습니다. 골목 바닥마저 고급스러워서 관광에 최적화된 마을입니다. 
+			 </div><br>
+			  <img class="photo" src="image/santo11.jpg" alt="picture"   	 title="이아 마을 내부"	style="width:800px; height:500px; margin-left:40px;"><br>
+			 <br><br><br><br>
+			 		
+			 
+			 <div id="sunset">
+				<br>산토리니가 세계 3대 석양이라는 이야기를 듣고 석양을 보려고 한참 기다려 좋은 자리에서 구경했습니다.  세계3대 석양은 과장된 소문이었습니다.<br>
+				코타키나발루에서 보았던 석양이 100배 더 아름답습니다. 인터넷에 도는 석양 사진이 실제 석양보다 근사하게 보입니다.
+			 	
+			 </div><br>
+			  <img class="photo" src="image/santo15.jpg" alt="picture"   	 title="석양"  	style="width:600px; height:500px; margin-left:120px;"><br>
+			 <br><br><br><br>
+			 
+			 
+			 			
+			 <div id="town">
+				<br>그러나 이아 마을의 건물 하나하나가 근사하고 그리스 요리도 맛있어서 이아 마을에서 일주일 머물러도 될 것 같습니다 . <br>
+			 	
+			 </div><br>
+			  <img class="photo" src="image/santo10.jpg" alt="picture"   	 title="이아 마을 내부"  	style="width:800px; height:500px; margin-left:40px;"><br>
+			 <br><br><br><br>
+			 
+			 
+			 <div id="sea" style="margin-right:50px;">
+		 	 <br>
+			 	 산토리니는 화산 섬이라 레드비치 등 해변가가 많지만 특출나게 아름다운 해변가는 없습니다. <br>
+			 	바닷물 색도 평범합니다. 하얀 건물이 독보적이어서 관광객이 많이 찾는 것 같습니다. 
+			 </div> <br>
+			 <img class="photo" src="image/santo14.jpg" alt="picture"   	 title="바다"  	style="width:800px; height:500px; margin-left:40px;"><br>
+			 <br><br><br><br>
+			 
+	</div> 
+
+</body>
+</html>
