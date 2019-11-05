@@ -96,6 +96,9 @@ public class QnaDb {
 				dto.setWrite_date(rs.getTimestamp("write_date"));
 				dto.setRecontent(rs.getString("recontent"));
 				dto.setReply_date(rs.getTimestamp("reply_date"));
+				dto.setReplyok(rs.getString("replyok"));
+				
+				list.add(dto);
 				
 			}
 			
