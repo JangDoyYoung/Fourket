@@ -12,6 +12,7 @@ public class qnaDto {
 	private String replyok;
 	private Timestamp write_date;
 	private Timestamp reply_date;
+	
 	public String getNum() {
 		return num;
 	}

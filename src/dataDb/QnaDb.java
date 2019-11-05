@@ -18,7 +18,7 @@ public class QnaDb {
 	{
 		String sql="insert into qna values (seq_num.nextval,?,?,?,sysdate)";
 		
-		Connection conn=db.getConnection();
+		Connection conn=db.getWooConnection();
 		PreparedStatement pstmt=null;
 		
 		try
@@ -44,18 +44,19 @@ public class QnaDb {
 		
 	}
 	
-	public void updateReply(String num)
+	public void updateReply(String recontent, String num)
 	{
-		String sql="update qna set recontent,sysdate where num=?";
+		String sql="update qna set recontent=?,sysdate where num=?";
 		
-		Connection conn=db.getConnection();
+		Connection conn=db.getWooConnection();
 		PreparedStatement pstmt=null;
 		
 		try
 		{
 			pstmt=conn.prepareStatement(sql);
 			
-			pstmt.setString(1, num);
+			pstmt.setString(1, recontent);
+			pstmt.setString(2, num);
 			
 			pstmt.execute();
 		}
@@ -75,7 +76,7 @@ public class QnaDb {
 	{
 		String sql="select * from qna";
 		
-		Connection conn=db.getConnection();
+		Connection conn=db.getWooConnection();
 		PreparedStatement pstmt=null;
 		ResultSet rs=null;
 		
