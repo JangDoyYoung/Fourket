@@ -17,7 +17,7 @@ public class FreeBoardDB {
 	{
 		String sql = "insert into freeboard (num,subject,writeday) values (seq_num.nextval,?,sysdate)";
 		
-		Connection conn = db.getConnection();
+		Connection conn = db.getWooConnection();
 		PreparedStatement pstmt = null;
 		
 		try 
@@ -45,7 +45,7 @@ public class FreeBoardDB {
 		
 		List<FreeBoardDto> list = new Vector<>();
 		
-		Connection conn = db.getConnection();
+		Connection conn = db.getWooConnection();
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		

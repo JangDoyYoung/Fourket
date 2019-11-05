@@ -16,9 +16,9 @@ public class GuestBookDB {
 	//추가
 	public void insertGuest(String subject)
 	{
-		String sql = "insert into guestbook values (seq_num.nextval,?,sysdate)";
+		String sql = "insert into guestbook values (seq_mini.nextval,?,sysdate)";
 		
-		Connection conn = db.getConnection();
+		Connection conn = db.getWooConnection();
 		PreparedStatement pstmt = null;
 		
 		try
@@ -46,7 +46,7 @@ public class GuestBookDB {
 	{
 		String sql = "select * from guestbook";
 		
-		Connection conn = db.getConnection();
+		Connection conn = db.getWooConnection();
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		
@@ -88,7 +88,7 @@ public class GuestBookDB {
 		
 		String sql = "select * from guest where num = ?";
 		
-		Connection conn = db.getConnection();
+		Connection conn = db.getWooConnection();
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		
