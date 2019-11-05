@@ -9,9 +9,11 @@ public class qnaDto {
 	private String title;
 	private String content;
 	private String recontent;
-	private String replyok;
+	private int replyok;
 	private Timestamp write_date;
 	private Timestamp reply_date;
+	
+	
 	public String getNum() {
 		return num;
 	}
@@ -42,10 +44,10 @@ public class qnaDto {
 	public void setRecontent(String recontent) {
 		this.recontent = recontent;
 	}
-	public String getReplyok() {
+	public int getReplyok() {
 		return replyok;
 	}
-	public void setReplyok(String replyok) {
+	public void setReplyok(int replyok) {
 		this.replyok = replyok;
 	}
 	public Timestamp getWrite_date() {
@@ -61,5 +63,6 @@ public class qnaDto {
 		this.reply_date = reply_date;
 	}
 	
+
 	
 }

@@ -31,7 +31,6 @@
            $("#qaboard").show(); 
             $("#freeboard").hide();
             $("#guestboard").hide();
-            qaboard_list();
         });
         
         $("#guest").click(function(){
@@ -152,52 +151,6 @@
 			}
 		 });
 	 }
-	 
-	 function qaboard_list()
-	 {
-		 $.ajax({
-			type: "get",
-			url: "qna_list.jsp",
-			dataType: "xml",
-			
-			success : function(data)
-			{
-				var str = "";
-				
-				$(data).find("qnadata").each(function(){
-					var s = $(this);
-					str +="<tr class='info' style='height: 50px;'>";
-					str += "<td>"+s.find("num").text()+"</td>";
-					str += "<td>"+s.find("title").text()+"</td>";
-					str += "<td>"+s.find("nickname").text()+"</td>";
-					str += "<td>"+s.find("writedate").text()+"</td>";
-					/* str += "<td>"+s.find("replyok").text()+"</td><br>"; */
-					if(s.find("replyok").text()=="null")
-						{
-							str +="<td>Χ</td>";
-						}
-					else
-						{
-							str +="<td>○</td>";
-						}
-					str += "</tr>";
-					
-				});
-				$("#qnatable tbody").html(str);
-			},
-			
-			statusCode : {
-				404: function(){
-					alert("url을 찾을수 없어요");
-				},
-				500: function(){
-					alert("서버 오류");
-				}
-			}
-		 });
-	 }
-	 
-	 
 </script>
 </head>
 <body>
@@ -244,25 +197,21 @@
 			</div>
 		</div>
 		<div class="text_list" id="qaboard">
-			<table id="qnatable">
-				<thead>
-					<tr class="title" style="height: 50px;">
-						<td style="width: 80px;">번호</td>
-						<td style="width: 1000px;">제목</td>
-						<td style="width: 100px;">이름(닉네임)</td>
-						<td style="width: 90px;">작성일</td>
-						<td style="width: 80px;">답변여부</td>
-					</tr>
-				</thead>
-				<tbody>
-				</tbody>
-				<!-- <tr class="info" style="height: 50px;">
+			<table>
+				<tr class="title" style="height: 50px;">
+					<td style="width: 80px;">번호</td>
+					<td style="width: 1000px;">제목</td>
+					<td style="width: 100px;">이름(닉네임)</td>
+					<td style="width: 90px;">작성일</td>
+					<td style="width: 80px;">답변여부</td>
+				</tr>
+				<tr class="info" style="height: 50px;">
 					<td>1</td>
 					<td>제목 나오는 부분</td>
 					<td>작성자</td>
 					<td>2019-10-30</td>
 					<td>O</td>
-				</tr> -->
+				</tr>
 			</table>
 			<div class="but_line">
 				<p>글쓰기</p>
