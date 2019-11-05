@@ -188,40 +188,52 @@ public boolean isEqualPass(String num, String pass)
 	}	
 		return b;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+public boolean islogin(String id, String pass)
+{
+	boolean b=false;
+	Connection conn = db.getConnection();
+	PreparedStatement pstmt = null;
+	String sql="select * from member where id=? and pass=?";
+	ResultSet rs = null;
+	
+	try {
+		pstmt=conn.prepareStatement(sql);
+		
+		pstmt.setString(1, id);
+		pstmt.setString(2, pass);
+		
+		rs=pstmt.executeQuery();
+		
+		if(rs.next())
+		{
+			b=true;
+		}
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}finally {
+		db.dbClose(rs, pstmt, conn);
+	}
+		return b;
+}
+public void deleteMember(String num)
+{
+	String sql = "delete from member where num";
+	Connection conn = db.getConnection();
+	PreparedStatement pstmt = null;
+	
+	try {
+		pstmt=conn.prepareStatement(sql);
+		
+		pstmt.setString(1, num);
+		
+		pstmt.execute();
+		
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}finally {
+		db.dbClose(pstmt, conn);
+	}
+  }
 }

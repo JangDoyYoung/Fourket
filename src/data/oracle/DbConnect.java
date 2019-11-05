@@ -27,6 +27,25 @@ public class DbConnect {
 		}
 	}
 	
+	String woo_url = "jdbc:oracle:thin:@192.168.0.76:1521:xe";
+
+	String woo_user="angel2";
+	String woo_pass="a1234";
+
+	public Connection getWooConnection()
+	{
+		//db server 에 연결 시도
+		Connection conn=null;
+		try {
+			conn=DriverManager.getConnection(woo_url, woo_user, woo_pass);
+			//System.out.println("오라클 연결 성공");
+		} catch (SQLException e) {
+			System.out.println("오라클 연결 실패:"
+							+e.getMessage());
+		}
+		return conn;
+	}
+	
 	public Connection getConnection()
 	{
 		// db server 에 연결 시도 
