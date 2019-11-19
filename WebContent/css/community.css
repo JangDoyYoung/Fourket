@@ -11,6 +11,7 @@
     width: 1200px;
     margin: 0 auto;
     overflow: hidden;
+    margin-bottom: 100px;
 }
 .text_list table{
     font-size: 13px;
@@ -27,6 +28,9 @@
 }
 .text_list table td{
     text-align: center;
+}
+.text_list table .info{
+	cursor: pointer;
 }
 .text_list table .info td:nth-of-type(2){
     text-align: left;
@@ -142,7 +146,6 @@
     margin-top: 30px;
     box-sizing: border-box;
     padding: 20px;
-    display: none;
 }
 .freeboard_write .title{
 	display: flex;
@@ -181,10 +184,28 @@
 	margin-left: 15px;
 }
 
+
 /* Q&A board css 시작 */
 
+.qna_list table tbody tr .qnatitle:hover
+{
+   cursor: pointer;
+}
+.qna_list table tbody tr .qnaok:hover
+{
+   cursor: pointer;
+}
 .qnaboard_write{
-	width: 750px;
+   width: 750px;
+    margin: 0 auto;
+    border: 1px solid #333;
+    margin-top: 30px;
+    box-sizing: border-box;
+    padding: 20px;
+}
+.qnaboard_view
+{
+   width: 750px;
     margin: 0 auto;
     border: 1px solid #333;
     margin-top: 30px;
@@ -211,14 +232,24 @@
 	padding-left: 10px;
 	box-sizing: border-box;
 }
-.qnaboard_write textarea{
-	width: 100%;
-	resize: none;
-	height: 400px;
-	margin-top: 20px;
-	padding: 10px;
-	outline: none;	
-	box-sizing: border-box;
+#qnawrite_content{
+   width: 100%;
+   resize: none;
+   height: 400px;
+   margin-top: 20px;
+   padding: 10px;
+   outline: none;   
+   box-sizing: border-box;
+   border: 1px solid #BFBFB8;
+}
+#qnawrite_recontent{
+   width: 100%;
+   resize: none;   
+   margin-top: 20px;
+   padding: 10px;
+   outline: none;   
+   box-sizing: border-box;
+   border: 1px solid #BFBFB8;
 }
 .qnaboard_write .but_line{
 	margin-top: 25px;
@@ -227,4 +258,168 @@
 } 
 .qnaboard_write .but_line p{
 	margin-left: 15px;
+}
+
+
+
+/* freeboard 내용 보기 css 시작*/
+.content_show{
+    margin: 0 auto;
+    width: 750px;
+    border: 1px solid #b7b7b7;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.content_show .content_title{
+    overflow: hidden;
+}
+.content_show .content_title p{
+    float: left;
+    display: inline;
+    font-size: 14px;
+    padding-right: 7px;
+    height: 18px;
+    line-height: 18px;
+    margin-bottom: 7px;
+}
+.content_show .content_title p.title_text{
+    border-right: 1px solid #b7b7b7;
+}
+.content_show .content_title p:nth-of-type(2){
+    padding-left: 7px;
+}
+.content_show .content_title p:nth-of-type(3){
+    float: right;
+    font-size: 13px;
+    color: #333;
+}
+.content_show .content_title .writer{
+    float: left;
+    width: 100%;
+    border-top: 1px solid #b7b7b7;
+    box-sizing: border-box;
+    padding-top: 7px;
+}
+.content_show .content_title .writer input{
+	width: 50%;
+    height: 30px;
+    padding-left: 7px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+.content_show .content_text{
+    min-height: 300px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.content_show .content_text textarea{
+	resize: none;
+    width: 100%;
+    height: 290px;
+    padding: 7px;
+    box-sizing: border-box;
+    border: none;	
+}
+
+.content_show .comment{
+    margin-top: 25px;
+}
+.content_show .comment .commnet_st{
+    display: flex;
+}
+.content_show .comment .commnet_st p{
+    font-size: 13px;
+    width: 60px;
+    text-align: center;
+}
+.content_show .comment .comment_text{
+    margin-top: 10px;
+    overflow: hidden;
+}
+.content_show .comment .comment_text textarea{
+    width: 84%;
+    height: 60px;
+    border: 1px solid #b7b7b7;
+    resize: none;
+    box-sizing: border-box;
+    padding: 10px;
+    outline: none;
+    float: left;
+}
+.content_show .comment .comment_text p{
+    float: right;
+    width: 13%;
+    height: 60px;
+    border: 1px solid #b7b7b7;
+    text-align: center;
+    line-height: 60px;
+    box-sizing: border-box;
+    font-size: 14px;
+    cursor: pointer;
+    transition: .4s;
+}
+.content_show .comment .comment_text p:hover{
+    background: #b7b7b7;
+    color: #333;            
+}
+.content_show .show_butlist{
+    overflow: hidden;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+.content_show .show_butlist p{
+    float: right;
+    font-size: 12px;
+    width: 55px;
+    height: 30px;
+    border: 1px solid #b7b7b7;
+    text-align: center;
+    line-height: 30px;
+    transition: .4s;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.content_show .show_butlist p:nth-of-type(1){
+    margin-right: 0px;
+}
+.content_show .show_butlist p:hover{
+    background: #b7b7b7;
+    color: #333;   
+}
+
+
+/* 페이징 처리 css  */
+.pagenation{
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 18px;
+}
+.pagenation ul{
+    display: flex;
+    justify-content: center;
+
+}
+.pagenation ul li{
+    list-style: none;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 35px;
+    font-size: 14px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: .4s;
+}
+.pagenation ul li:hover{
+    background: #ededed;
+}
+.pagenation ul li a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
 }
