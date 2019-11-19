@@ -341,7 +341,7 @@
 				        	}else{
 				        		str += '';
 				        	}
-					        str += '        <p onclick="freeboard_list()">목록</p>';
+					        str += '        <p onclick="freeboard_list(1)">목록</p>';
 					        str += '        <p id="nav_write" onclick="write_form()">글쓰기</p>';
 					        str += '    </div>';
 					        str += '</div>';
@@ -423,7 +423,7 @@
     			$('#free_subject').val("");
     			$("#free_subject").focus();
     			
-    			freeboard_list();
+    			freeboard_list(1);
     			
     		},
     		statusCode : {
@@ -438,12 +438,12 @@
     	});
     		
 	 	$("#write_form").hide();
-	 	freeboard_list();
+	 	freeboard_list(1);
 	 }
 	 
 	 function freewrite_close()
 	 {
-	 	freeboard_list(); 
+	 	freeboard_list(1); 
 	 }
 	 
 	 function free_delete(d_num)
@@ -459,7 +459,7 @@
 				success : function(data)
 				{
 					alert("삭제 되었습니다.");
-					freeboard_list(); 
+					freeboard_list(1); 
 				},
 				statusCode : {
 					404: function(){
@@ -501,7 +501,7 @@
 			        str += '    </div>';
 			        str += '    <div class="show_butlist">';
 			        str += '        <p onclick="free_update(this)" num="'+ s.find("num").text() +'">확인</p>';
-			        str += '        <p onclick="freeboard_list()">목록</p>';
+			        str += '        <p onclick="freeboard_list(1)">목록</p>';
 			        str += '        <p id="nav_write" onclick="write_form()">글쓰기</p>';
 			        str += '    </div>';
 			        str += '</div>';
@@ -535,7 +535,7 @@
 				success : function(data)
 				{
 					alert("수정이 완료 되었습니다.");
-					freeboard_list(); 
+					freeboard_list(1); 
 				},
 				statusCode : {
 					404: function(){
@@ -946,47 +946,8 @@
 		
 		<div class="text_list" id="qaboard">
 			<div class="qna_list" id="qna_list">
-				<table id="qnatable">
-					<thead>
-						<tr class="title" style="height: 50px;">
-							<td style="width: 80px;">번호</td>
-							<td style="width: 1000px;">제목</td>
-							<td style="width: 100px;">이름(닉네임)</td>
-							<td style="width: 90px;">작성일</td>
-							<td style="width: 80px;">답변여부</td>
-						</tr>
-					</thead>
-					<tbody>
-					</tbody>
-					<!-- <tr class="info" style="height: 50px;">
-						<td>1</td>
-						<td>제목 나오는 부분</td>
-						<td>작성자</td>
-						<td>2019-10-30</td>
-						<td>O</td>
-					</tr> -->
-				</table>
-				<div class="but_line" id="qnawrite_but">
-					<p>글쓰기</p>
-				</div>
 			</div>
-			<div class="qnaboard_write" id="qnawrite_form">
-				<div class="title">
-					<p>게시판</p> 
-					<p>Q & A</p>
-				</div>
-				<div class="title">
-					<p>제목</p>  
-					<p>
-						<input type="text" placeholder="제목을 입력하세요.">
-					</p>
-				</div>
-				<textarea ></textarea>
-				<div class="but_line">
-					<p id="qnawrite_close">취소</p>
-					<p id="qnawrite_sub">확인</p>
-				</div>
-			</div>
+		
 		</div>
 		<div class="text_list" id="guestboard">
 			<div class="text_enter">

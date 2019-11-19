@@ -16,7 +16,7 @@ public class MemberDB {
 public	void insertMember(MemberDto dto)
 	{
 		String sql="insert into member values (seq_mini.nextval,?,?,?,?,?,?,sysdate)";
-		Connection conn = db.getConnection();
+		Connection conn = db.getWooConnection();
 		PreparedStatement pstmt = null;
 	
 		try {
@@ -40,7 +40,7 @@ public	void insertMember(MemberDto dto)
 	{
 		boolean find = false;
 		String sql = "select * from member where id=?";
-		Connection conn = db.getConnection();
+		Connection conn = db.getWooConnection();
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		
@@ -66,7 +66,7 @@ public	void insertMember(MemberDto dto)
 	public List<MemberDto> getAllMember()
 	{
 		String sql="select * from member order by num asc";
-		Connection conn = db.getConnection();
+		Connection conn = db.getWooConnection();
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		List<MemberDto> list=new Vector<MemberDto>();
@@ -104,7 +104,7 @@ public	void insertMember(MemberDto dto)
 public MemberDto getData(String num)
 {
 	MemberDto dto = new MemberDto();
-	Connection conn = db.getConnection();
+	Connection conn = db.getWooConnection();
 	PreparedStatement pstmt = null;
 	ResultSet rs=null;
 	String sql="select * from member where num=?";
@@ -138,7 +138,7 @@ public MemberDto getData(String num)
 
 public void updateMember(MemberDto dto)
 {
-	Connection conn = db.getConnection();
+	Connection conn = db.getWooConnection();
 	PreparedStatement pstmt = null;
 	String sql="update member set name=?,nickname=?,pass=?,email1=?,email2=? where num=?";
 	
@@ -161,7 +161,7 @@ public void updateMember(MemberDto dto)
 public boolean isEqualPass(String num, String pass)
 {
 	boolean b=false;
-	Connection conn = db.getConnection();
+	Connection conn = db.getWooConnection();
 	PreparedStatement pstmt = null;
 	String sql="select count(*) from member where num=? and pass=?";
 	ResultSet rs = null;
@@ -191,7 +191,7 @@ public boolean isEqualPass(String num, String pass)
 public boolean islogin(String id, String pass)
 {
 	boolean b=false;
-	Connection conn = db.getConnection();
+	Connection conn = db.getWooConnection();
 	PreparedStatement pstmt = null;
 	String sql="select * from member where id=? and pass=?";
 	ResultSet rs = null;
@@ -219,7 +219,7 @@ public boolean islogin(String id, String pass)
 public void deleteMember(String num)
 {
 	String sql = "delete from member where num";
-	Connection conn = db.getConnection();
+	Connection conn = db.getWooConnection();
 	PreparedStatement pstmt = null;
 	
 	try {

@@ -14,6 +14,9 @@
 	List<qnaDto> list=db.getList();
 	SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
 	
+	String loginok=(String)session.getAttribute("loginok");
+	String id=(String)session.getAttribute("id");
+
 %>
 <result>
 	<%
@@ -22,7 +25,7 @@
 			<qnadata>
 				<num><%=dto.getNum()%></num>
 				<title><%=dto.getTitle()%></title>
-				<nickname><%=dto.getNickname()%></nickname>
+				<nickname><%=dto.getNickname() %></nickname>
 				<writedate><%=sdf.format(dto.getWrite_date())%></writedate>
 				<replyok><%=dto.getReplyok()%></replyok>
 			</qnadata>
